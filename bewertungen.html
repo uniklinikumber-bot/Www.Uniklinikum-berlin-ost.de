@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bewertungen | Uniklinikum Berlin-Ost</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+.container{
+    max-width:900px;
+    margin:120px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+h1{
+    color:#005A9C;
+    margin-bottom:20px;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+textarea{
+    width:100%;
+    height:180px;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    resize:none;
+}
+
+select{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+}
+
+button{
+    margin-top:25px;
+    background:#005A9C;
+    color:white;
+    border:none;
+    padding:15px 35px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+button:hover{
+    background:#003d6e;
+}
+
+.success{
+    display:none;
+    margin-top:20px;
+    color:green;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo.png">
+Uniklinikum Berlin-Ost
+</div>
+
+<nav>
+<a href="index.html">Start</a>
+<a href="bewertungen.html">Bewertungen</a>
+<a href="kontakte.html">Kontakte</a>
+</nav>
+
+</header>
+
+<div class="container">
+
+<h1>Behandlung bewerten</h1>
+
+<label>Sterne</label>
+
+<select id="sterne">
+<option>0 Sterne</option>
+<option>1 Stern</option>
+<option>2 Sterne</option>
+<option>3 Sterne</option>
+<option>4 Sterne</option>
+<option selected>5 Sterne</option>
+</select>
+
+<label>Deine Bewertung</label>
+
+<textarea id="text" placeholder="Schreibe hier deine Bewertung..."></textarea>
+
+<button onclick="absenden()">
+Bewertung absenden
+</button>
+
+<div class="success" id="meldung">
+Vielen Dank für deine Bewertung!
+</div>
+
+</div>
+
+<script>
+
+function absenden(){
+
+let sterne=document.getElementById("sterne").value;
+let text=document.getElementById("text").value;
+
+if(text.trim()==""){
+    alert("Bitte schreibe eine Bewertung.");
+    return;
+}
+
+// Hier kannst du später deinen Server oder eine API aufrufen.
+
+document.getElementById("meldung").style.display="block";
+
+document.getElementById("text").value="";
+
+}
+
+</script>
+
+</body>
+</html>
