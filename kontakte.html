@@ -1,74 +1,129 @@
-// ==========================
-// Uniklinikum Berlin-Ost
-// script.js
-// ==========================
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | Uniklinikum Berlin-Ost</title>
 
-// Navigation beim Scrollen
-window.addEventListener("scroll", () => {
-    const header = document.querySelector("header");
+<link rel="stylesheet" href="css/style.css">
 
-    if (window.scrollY > 30) {
-        header.style.boxShadow = "0 10px 30px rgba(0,0,0,.15)";
-    } else {
-        header.style.boxShadow = "0 5px 15px rgba(0,0,0,.08)";
-    }
-});
+<style>
+.container{
+    max-width:800px;
+    margin:120px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
 
-// Buttons animieren
-const buttons = document.querySelectorAll(".button");
+h1{
+    color:#005A9C;
+    margin-bottom:20px;
+}
 
-buttons.forEach(button => {
+p{
+    font-size:20px;
+    color:#555;
+    line-height:1.8;
+}
+</style>
 
-    button.addEventListener("mouseenter", () => {
-        button.style.transform = "translateY(-4px) scale(1.03)";
-    });
+</head>
 
-    button.addEventListener("mouseleave", () => {
-        button.style.transform = "translateY(0)";
-    });
+<body>
 
-});
+<header>
+<div class="logo">
+<img src="logo.png" alt="Logo" width="50">
+<span>Uniklinikum Berlin-Ost</span>
+</div>
 
-// Karten animieren
-const cards = document.querySelectorAll(".card");
+<nav>
+<a href="index.html">Start</a>
+<a href="bewertungen.html">Bewertungen</a>
+<a href="kontakte.html">Kontakt</a>
+</nav>
+</header>
 
-cards.forEach(card => {
+<div class="container">
 
-    card.addEventListener("mouseenter", () => {
+<h1>Kontakt</h1>
 
-        card.style.transform = "translateY(-10px)";
-        card.style.transition = ".3s";
+<p>
+📧 Melde dich gerne per E-Mail bei uns.
+</p>
 
-    });
+<p>
+📻 Oder schreibe uns über den D-Funk auf unserem Discord-Server.
+</p>
 
-    card.addEventListener("mouseleave", () => {
+</div>
 
-        card.style.transform = "translateY(0px)";
+</body>
+</html><!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt | Uniklinikum Berlin-Ost</title>
 
-    });
+<link rel="stylesheet" href="css/style.css">
 
-});
+<style>
+.container{
+    max-width:800px;
+    margin:120px auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
 
-// Smooth Scroll
-document.querySelectorAll("a[href^='#']").forEach(anchor => {
+h1{
+    color:#005A9C;
+    margin-bottom:20px;
+}
 
-    anchor.addEventListener("click", function(e) {
+p{
+    font-size:20px;
+    color:#555;
+    line-height:1.8;
+}
+</style>
 
-        e.preventDefault();
+</head>
 
-        const ziel = document.querySelector(this.getAttribute("href"));
+<body>
 
-        if(ziel){
+<header>
+<div class="logo">
+<img src="logo.png" alt="Logo" width="50">
+<span>Uniklinikum Berlin-Ost</span>
+</div>
 
-            ziel.scrollIntoView({
-                behavior:"smooth"
-            });
+<nav>
+<a href="index.html">Start</a>
+<a href="bewertungen.html">Bewertungen</a>
+<a href="kontakte.html">Kontakt</a>
+</nav>
+</header>
 
-        }
+<div class="container">
 
-    });
+<h1>Kontakt</h1>
 
-});
+<p>
+📧 Melde dich gerne per E-Mail bei uns.
+</p>
 
-// Begrüßung
-console.log("Uniklinikum Berlin-Ost Webseite erfolgreich geladen.");
+<p>
+📻 Oder schreibe uns über den D-Funk auf unserem Discord-Server.
+</p>
+
+</div>
+
+</body>
+</html>
